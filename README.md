@@ -6,8 +6,7 @@ localmente e permite consultá-los em uma lista e em um mapa.
 
 ## Integrantes
 
-Antes da entrega, substituir esta orientação pelos nomes completos e RAs dos
-integrantes.
+- Eric França Arantes dos Santos
 
 ## Funcionalidades
 
