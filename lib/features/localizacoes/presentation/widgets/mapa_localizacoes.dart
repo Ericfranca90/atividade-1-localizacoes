@@ -37,7 +37,7 @@ class MapaLocalizacoes extends StatelessWidget {
         ),
         MarkerLayer(
           markers: [
-            for (var indice = 0; indice < localizacoes.length; indice++)
+            for (var indice = localizacoes.length - 1; indice >= 0; indice--)
               Marker(
                 point: LatLng(
                   localizacoes[indice].latitude,
