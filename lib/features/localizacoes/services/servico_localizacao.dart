@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
+import 'package:permission_handler/permission_handler.dart';
 
 class FalhaLocalizacao implements Exception {
   const FalhaLocalizacao(this.mensagem);
@@ -34,6 +35,19 @@ class ServicoLocalizacao {
     }
 
     return permissao;
+  }
+
+  Future<void> prepararNotificacoes() async {
+    var permissao = await Permission.notification.status;
+    if (!permissao.isGranted) {
+      permissao = await Permission.notification.request();
+    }
+
+    if (!permissao.isGranted) {
+      throw const FalhaLocalizacao(
+        'Permita as notificações para iniciar a coleta em segundo plano.',
+      );
+    }
   }
 
   Stream<Position> obterPosicoes() {

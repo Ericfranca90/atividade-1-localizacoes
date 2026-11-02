@@ -40,6 +40,7 @@ class _TelaColetaState extends State<TelaColeta> {
 
     try {
       final permissao = await _servico.prepararAcesso();
+      await _servico.prepararNotificacoes();
       final assinatura = _servico.obterPosicoes().listen(
         _salvarPosicao,
         onError: _tratarErroDoStream,

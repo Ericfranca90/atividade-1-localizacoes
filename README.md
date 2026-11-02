@@ -23,6 +23,7 @@ localmente e permite consultá-los em uma lista e em um mapa.
 
 - Flutter e Dart.
 - `geolocator` para permissões e coleta das posições.
+- `permission_handler` para solicitar a permissão de notificações.
 - `sqflite` para persistência local.
 - `flutter_map` para o mapa interativo.
 - OpenStreetMap como provedor das imagens do mapa.
@@ -32,7 +33,7 @@ localmente e permite consultá-los em uma lista e em um mapa.
 1. Conecte um dispositivo Android com a depuração USB habilitada.
 2. Na pasta do projeto, execute `flutter pub get`.
 3. Execute `flutter run`.
-4. Autorize o acesso à localização quando solicitado.
+4. Autorize o acesso à localização e às notificações quando solicitado.
 
 O funcionamento em segundo plano, a notificação e o ícone devem ser conferidos
 em um dispositivo Android real.
